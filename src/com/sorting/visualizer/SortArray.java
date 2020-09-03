@@ -33,13 +33,7 @@ public class SortArray extends JPanel{
 			arr[i] = 1 + rand.nextInt(NUM_BARS);
 			bar_colors[i] = 0;
 		}
-//		for(int i = 0; i < NUM_BARS; i++) {
-//			int swapWithIndex = rand.nextInt(NUM_BARS - 1);
-//			int temp = arr[i];
-//			arr[i] = arr[swapWithIndex];
-//			arr[swapWithIndex] = temp;
-//			bar_colors[i] = 0;
-//		}
+
 	}
 	@Override
 	public void paintComponent(Graphics g) {
@@ -99,5 +93,26 @@ public class SortArray extends JPanel{
 			start++;
 		}
 		bar_colors[i] = colorB;
+	}
+	
+	public void changeSingleColor(int i, int color, int border, boolean left, int diff) {
+		diff = diff / 20;
+		if(left) {
+			int start = i + diff;
+			while(start >= i) {
+				if(start > border && start < arr.length)
+					bar_colors[start] = color;
+				start--;
+			}
+		}
+		else {
+			int start = i - diff;
+			while(start <= i) {
+				if(start < border && start >= 0)
+					bar_colors[start] = color;
+				start++;
+			}
+		}
+		repaint();
 	}
 }
