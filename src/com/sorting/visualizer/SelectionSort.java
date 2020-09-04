@@ -22,6 +22,7 @@ public class SelectionSort implements Runnable {
 		for(int i = 0; i < n; i++) {
 			min = sortArray.arr[i];
 			minIndex = i;
+			
 			for(int j = i; j < n; j++) {
 				if(sortArray.arr[j] < min) {
 					min = sortArray.arr[j];
