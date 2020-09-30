@@ -2,7 +2,7 @@
 ## purpose
 This project's purpose was to help me understand how to implement sorting algorithms and how sorting algorithms handle data in real time.
 
-![](resources/sorting-visualizer.png)
+![](resources/merge-sort.gif)
 
 ## Features 
 This project features sorts including:
